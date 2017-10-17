@@ -1,0 +1,5 @@
+url: https://alanocallaghan.github.io/heatmaplyExamples/
+
+template:
+  params:
+    bootswatch: cerulean

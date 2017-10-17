@@ -1,0 +1,14 @@
+urls:
+  reference: https://alanocallaghan.github.io/heatmaplyExamples//reference
+  article: https://alanocallaghan.github.io/heatmaplyExamples//articles
+articles:
+  biological_data_2: biological_data_2.html
+  biological_data_3: biological_data_3.html
+  biological_data: biological_data.html
+  glmnet: glmnet.html
+  heatmaply_examples: heatmaply_examples.html
+  measles: measles.html
+  non_centred_heatmaps: non_centred_heatmaps.html
+  reproducing_Nature_2015_Alfano: reproducing_Nature_2015_Alfano.html
+  reproducing_Nature_2015_Kotsyfakis: reproducing_Nature_2015_Kotsyfakis.html
+

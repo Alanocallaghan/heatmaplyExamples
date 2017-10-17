@@ -17,8 +17,8 @@ pam50_genes <- intersect(pam50_genes, rownames(raw_expression))
 raw_pam50_expression <- raw_expression[pam50_genes, ]
 voomed_pam50_expression <- voomed_expression[pam50_genes, ]
 
-center_raw_mat <- cor_mat_raw_logged - 
-    apply(cor_mat_raw_logged, 1, median)
+center_raw_mat <- raw_pam50_expression - 
+    apply(raw_pam50_expression, 1, median)
 
 raw_max <- max(abs(center_raw_mat), na.rm=TRUE)
 raw_limits <- c(-raw_max, raw_max)

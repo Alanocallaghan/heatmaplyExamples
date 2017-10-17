@@ -68,8 +68,10 @@ than clustering based on gene expression. However, the use of different
 linkage criteria or distance measures may alter the observed clusters.
 
 ```{r}
-center_voom_mat <- voomed_pam50_expression - 
-    apply(voomed_pam50_expression, 1, median)
+pam50_genes <- intersect(pam50_genes, rownames(voomed_expression))
+
+center_voom_mat <- voomed_expression[pam50_genes, ] - 
+    apply(voomed_expression[pam50_genes, ], 1, median)
 
 voom_max <- max(abs(center_voom_mat))
 voom_limits <- c(-voom_max, voom_max)

@@ -36,7 +36,7 @@ knitr::opts_chunk$set(
 Introduction
 ============
 
-Due to the size of the objects, this file is seperated to three fils. You can view this series in the following links:
+Due to the size of the objects, this file is seperated to three files. You can view this series in the following links:
 
 * [Using heatmaply with gene expression data - Visualization of raw and voom-transformed data (all genes)](https://cdn.rawgit.com/talgalili/heatmaplyExamples/master/inst/doc/biological_data.html)
 * [Using heatmaply with gene expression data - Visualization of raw data (median-centered data, PAM50 genes only)](https://cdn.rawgit.com/talgalili/heatmaplyExamples/master/inst/doc/biological_data_2.html)
@@ -81,8 +81,8 @@ pam50_genes <- intersect(pam50_genes, rownames(raw_expression))
 raw_pam50_expression <- raw_expression[pam50_genes, ]
 voomed_pam50_expression <- voomed_expression[pam50_genes, ]
 
-center_raw_mat <- cor_mat_raw_logged - 
-    apply(cor_mat_raw_logged, 1, median)
+center_raw_mat <- raw_pam50_expression - 
+    apply(raw_pam50_expression, 1, median)
 
 raw_max <- max(abs(center_raw_mat), na.rm=TRUE)
 raw_limits <- c(-raw_max, raw_max)
